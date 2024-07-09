@@ -1,0 +1,37 @@
+---
+title: "Preparing CAPD Data for Analysis"
+author: "Isaac Chen"
+format: html
+---
+
+```{r, include = FALSE, cache = FALSE}
+knitr::read_chunk('data_preparation.R')
+```
+
+```{r, load_packages, message = FALSE, warning = FALSE}
+```
+
+```{r, load_rawdata}
+```
+
+```{r, recode_variables}
+```
+
+```{r, select_variables}
+```
+
+```{r, rename_variables, warning = FALSE}
+```
+
+```{r, recode_WeeFIM}
+```
+
+```{r, code_factors}
+```
+
+```{r, data_summary}
+```
+
+```{r, save_data}
+```
+
