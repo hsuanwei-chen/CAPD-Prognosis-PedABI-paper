@@ -20,8 +20,9 @@ raw_data <- read.csv(data_path)
 
 ## ---- recode_variables ----
 # Trim white spaces to avoid multiple same categories
-# Re-categorize etiology as TBI vs Non-TBI
-# Re-categorize race as White vs Black vs Other
+# Categorize transfers as Unplanned vs None/Planned
+# Categorize etiology as TBI vs Non-TBI
+# Categorize race as White vs Black vs Other
 processed_data <- raw_data |>
   mutate(
     across(where(is.character), str_trim), 
@@ -45,7 +46,7 @@ processed_data <- processed_data |>
 
 ## ---- rename_variables ----
 # Transform quantitative variables (all columns after age) to numeric data type
-# Rename variables to comply with tidyverse style guide and clarity
+# Rename variables for clarity
 processed_data <- processed_data |>
   mutate(across(AgeAtFirstAdmission:WeeFIM_CogDFQ_discharge, as.numeric)) |>
   rename(
